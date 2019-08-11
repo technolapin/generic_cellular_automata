@@ -1,3 +1,11 @@
+/**
+I'm currently trying to make some generic cellular automatas
+Testing the use of the Traits "State" and "Automata" with the usual Conway's game of life (Toto)
+and an automata whose states are Conway's game of life
+*/
+
+
+
 trait State
 {
     fn local_transition(&self, neighboors: Vec<&Self>) -> Self;
@@ -9,6 +17,10 @@ trait Automata
     fn global_transition(&self) -> Self;
     
 }
+
+
+
+
 
 #[derive(Clone, Debug, PartialEq)]
 enum Etat
